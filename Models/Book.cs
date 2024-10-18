@@ -2,15 +2,15 @@
 {
     public class Book
     {
-        public Book(string title, string author, Genre genre)
+        public Book(int id, string title, string author, Genre genre)
         {
-            Id = 0;
+            Id = id;
             Title = title;
             Author = author;
             Genre = genre;
         }
 
-        public Book(string title, string author, string summary, Genre genre) : this(title, author, genre)
+        public Book(int id, string title, string author, string summary, Genre genre) : this(id, title, author, genre)
         {
             Summary = summary;
         }

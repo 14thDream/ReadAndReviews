@@ -2,9 +2,9 @@
 {
     public class Genre
     {
-        public Genre(string name)
+        public Genre(int id, string name)
         {
-            Id = 0;
+            Id = id;
             Name = name;
         }
 
