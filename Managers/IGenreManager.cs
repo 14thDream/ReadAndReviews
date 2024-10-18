@@ -2,9 +2,10 @@
 
 namespace Managers
 {
-    interface IGenreManager
+    public interface IGenreManager
     {
         void AddGenre(string name);
         Genre? GetGenre(int id);
+        IEnumerable<Genre> GetGenres();
     }
 }

@@ -21,5 +21,10 @@ namespace Managers
         {
             return (id >= 0 && id < _genres.Count) ? _genres[id] : null;
         }
+
+        public IEnumerable<Genre> GetGenres()
+        {
+            return _genres;
+        }
     }
 }
