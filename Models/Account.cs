@@ -12,10 +12,10 @@
 
         public Account(string email, string username, string passwordHash) : this(email, username, passwordHash, PermissionLevel.User) { }
 
-        private string Email { get; }
-        private string Username { get; set; }
-        private string PasswordHash { get; set; }
-        private PermissionLevel PermissionLevel { get; set; }
+        public string Email { get; }
+        public string Username { get; set; }
+        public string PasswordHash { get; set; }
+        public PermissionLevel PermissionLevel { get; set; }
     }
 
     public enum PermissionLevel

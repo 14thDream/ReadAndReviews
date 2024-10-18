@@ -10,9 +10,9 @@
             Rating = rating;
         }
 
-        private int Id { get; }
-        private Account? Account { get; }
-        private Book Book { get; }
-        private int Rating { get; set; }
+        public int Id { get; set; }
+        public Account? Account { get; }
+        public Book Book { get; }
+        public int Rating { get; set; }
     }
 }

@@ -15,10 +15,10 @@
             Summary = summary;
         }
 
-        private int Id { get; }
-        private string Title { get; set; }
-        private string Author { get; set; }
-        private string? Summary { get; set; }
-        private Genre Genre { get; }
+        public int Id { get; }
+        public string Title { get; set; }
+        public string Author { get; set; }
+        public string? Summary { get; set; }
+        public Genre Genre { get; }
     }
 }

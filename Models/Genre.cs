@@ -8,7 +8,7 @@
             Name = name;
         }
 
-        private int Id { get; }
-        private string Name { get; }
+        public int Id { get; }
+        public string Name { get; }
     }
 }
