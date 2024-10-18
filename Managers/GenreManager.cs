@@ -19,6 +19,7 @@ namespace Managers
 
         public Genre? GetGenre(int id)
         {
+            id -= 1;
             return (id >= 0 && id < _genres.Count) ? _genres[id] : null;
         }
 
