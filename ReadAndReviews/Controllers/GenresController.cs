@@ -21,7 +21,7 @@ namespace ReadAndReviews.Controllers
             _genreService.AddGenre(name);
 
             Genre genre = _genreService.GetGenres().Last();
-            return CreatedAtAction(nameof(GetGenre), new { Id = genre.Id}, genre);
+            return CreatedAtAction(nameof(GetGenre), new { Id = genre.Id }, genre);
         }
 
         [HttpGet("{id}")]

@@ -1,5 +1,4 @@
-﻿using Managers;
-using Microsoft.AspNetCore.Http;
+﻿using Managers.Services;
 using Microsoft.AspNetCore.Mvc;
 using Models;
 
@@ -9,9 +8,9 @@ namespace ReadAndReviews.Controllers
     [ApiController]
     public class BooksController : ControllerBase
     {
-        private readonly IBookManager _bookManager;
+        private readonly IBookService _bookManager;
 
-        public BooksController(IBookManager bookManager)
+        public BooksController(IBookService bookManager)
         {
             _bookManager = bookManager;
         }
