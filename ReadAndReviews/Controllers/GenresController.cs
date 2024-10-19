@@ -10,9 +10,9 @@ namespace ReadAndReviews.Controllers
     {
         private readonly IGenreService _genreService;
 
-        public GenresController(IGenreService genreManager)
+        public GenresController(IGenreService genreService)
         {
-            _genreService = genreManager;
+            _genreService = genreService;
         }
 
         [HttpPut]

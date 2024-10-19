@@ -10,9 +10,9 @@ namespace ReadAndReviews.Controllers
     {
         private readonly IBookService _bookService;
 
-        public BooksController(IBookService bookManager)
+        public BooksController(IBookService bookService)
         {
-            _bookService = bookManager;
+            _bookService = bookService;
         }
 
         [HttpPut]
