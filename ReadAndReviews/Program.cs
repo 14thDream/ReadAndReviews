@@ -10,6 +10,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddSingleton<IGenreManager, GenreManager>();
+builder.Services.AddSingleton<IBookManager, BookManager>();
 
 var app = builder.Build();
 
