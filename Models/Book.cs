@@ -1,16 +1,19 @@
-﻿namespace Models
+﻿using System.Text.Json.Serialization;
+
+namespace Models
 {
     public class Book
     {
-        public Book(int id, string title, string author, Genre genre)
+        public Book(int id, string title, string author, int genreId)
         {
             Id = id;
             Title = title;
             Author = author;
-            Genre = genre;
+            GenreId = genreId;
         }
 
-        public Book(int id, string title, string author, string summary, Genre genre) : this(id, title, author, genre)
+        [JsonConstructor]
+        public Book(int id, string title, string author, string summary, int genreId) : this(id, title, author, genreId)
         {
             Summary = summary;
         }
@@ -19,6 +22,7 @@
         public string Title { get; set; }
         public string Author { get; set; }
         public string? Summary { get; set; }
-        public Genre Genre { get; }
+        public int GenreId { get; }
+        private Genre Genre { get; }
     }
 }
