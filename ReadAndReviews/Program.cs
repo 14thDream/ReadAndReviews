@@ -12,6 +12,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IGenreService, GenreManager>();
 builder.Services.AddScoped<IBookService, BookManager>();
+builder.Services.AddScoped<IAccountService, AccountManager>();
 
 var app = builder.Build();
 
