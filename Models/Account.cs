@@ -1,4 +1,6 @@
-﻿namespace Models
+﻿using System.Text.Json.Serialization;
+
+namespace Models
 {
     public class Account
     {
@@ -10,6 +12,7 @@
             PermissionLevel = permissionLevel;
         }
 
+        [JsonConstructor]
         public Account(string email, string username, string passwordHash) : this(email, username, passwordHash, PermissionLevel.User) { }
 
         public string Email { get; }
