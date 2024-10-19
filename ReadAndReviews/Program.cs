@@ -1,4 +1,5 @@
 using Managers;
+using Managers.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,7 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-builder.Services.AddSingleton<IGenreManager, GenreManager>();
+builder.Services.AddSingleton<IGenreService, GenreManager>();
 builder.Services.AddSingleton<IBookManager, BookManager>();
 
 var app = builder.Build();

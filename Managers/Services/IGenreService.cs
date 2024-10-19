@@ -1,6 +1,6 @@
 ﻿using Models;
 
-namespace Managers
+namespace Managers.Services
 {
     public interface IGenreManager
     {

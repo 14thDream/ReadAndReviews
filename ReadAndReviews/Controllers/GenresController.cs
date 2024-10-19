@@ -1,4 +1,4 @@
-﻿using Managers;
+﻿using Managers.Services;
 using Microsoft.AspNetCore.Mvc;
 using Models;
 
@@ -8,26 +8,26 @@ namespace ReadAndReviews.Controllers
     [ApiController]
     public class GenresController : ControllerBase
     {
-        private readonly IGenreManager _genreManager;
+        private readonly IGenreService _genreService;
 
-        public GenresController(IGenreManager genreManager)
+        public GenresController(IGenreService genreManager)
         {
-            _genreManager = genreManager;
+            _genreService = genreManager;
         }
 
         [HttpPut]
         public ActionResult AddGenre(string name)
         {
-            _genreManager.AddGenre(name);
+            _genreService.AddGenre(name);
 
-            Genre genre = _genreManager.GetGenres().Last();
+            Genre genre = _genreService.GetGenres().Last();
             return CreatedAtAction(nameof(GetGenre), new { Id = genre.Id}, genre);
         }
 
         [HttpGet("{id}")]
         public ActionResult<Genre> GetGenre(int id)
         {
-            return _genreManager.GetGenre(id) switch
+            return _genreService.GetGenre(id) switch
             {
                 null => NotFound(),
                 var genre => Ok(genre)
@@ -37,7 +37,7 @@ namespace ReadAndReviews.Controllers
         [HttpGet]
         public OkObjectResult GetGenres()
         {
-            return Ok(_genreManager.GetGenres());
+            return Ok(_genreService.GetGenres());
         }
     }
 }

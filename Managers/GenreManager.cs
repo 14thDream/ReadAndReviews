@@ -1,8 +1,9 @@
-﻿using Models;
+﻿using Managers.Services;
+using Models;
 
 namespace Managers
 {
-    public class GenreManager : IGenreManager
+    public class GenreManager : IGenreService
     {
         private readonly List<Genre> _genres;
 
