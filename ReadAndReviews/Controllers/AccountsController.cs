@@ -25,7 +25,7 @@ namespace ReadAndReviews.Controllers
             };
         }
 
-        [HttpPut("{email}")]
+        [HttpPut]
         public ActionResult AddAccount(Account account)
         {
             return _accountService.AddAccount(account) switch
